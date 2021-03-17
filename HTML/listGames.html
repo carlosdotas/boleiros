@@ -1,0 +1,161 @@
+<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5; width: 250px" id="mySidebar">
+  <div class="center top_menu">
+    <table>
+      <tr>
+        <td width="1"><img width="33px" id="logo" src=""></td>
+        <td>
+          <div class="titleApp" ><b id="titleApp"></b></div>
+          <div class="nome">...</div>
+        </td>
+      </tr>
+      <tr class="viewSaldo">
+        <td width="1">Limite:</td>
+        <td><b class="saldo">0,00</b></td>
+        <!--
+        <button type="button" id="btnScreenshot">Screenshot</button>
+        <img src="" width="200" height="200" id="img1" border="0" />
+        <script type="text/javascript">
+          
+$(document).ready(function(){
+  $("#btnScreenshot").on('click', function(e){
+    html2canvas(document.body, {
+      taintTest: true,
+      allowTaint: true,
+      useCORS: true,
+      onrendered: function(canvas) {
+        $("#img1").attr('src', canvas.toDataURL());
+        //document.body.appendChild(canvas);
+      }     
+    });
+  }); 
+}); 
+        </script>
+      -->
+      </tr>           
+    </table>
+  </div>    
+
+  <ul class="w3-ul  w3-hoverable">
+    <li class="menuBilhete">
+      <a href="#" class="w3-bar-item w3-button" onclick="loaging('bilhete.html?'+Math.random());" >Confirmar Pré-Bilhete</a>
+    </li>
+    <li class="menuCaixa">
+      <a href="#" class="w3-bar-item w3-button" onclick="loaging('caixa.html?'+Math.random());" >Caixa</a>
+    </li>
+    <li class="menuConfig">
+      <a href="#" class="w3-bar-item w3-button" onclick="loaging('config.html?'+Math.random());" >Configurações</a>
+    </li>
+    <li class="manuSair">
+      <a href="#" class="w3-bar-item w3-button" onclick="Logoff();" >Sair</a>
+    </li>
+  </ul>
+</div>
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" id="myOverlay"></div>
+
+<!-- Page Content -->
+<div class="w3-dark-grey topoBar w3-card"> 
+
+  <a href="#" id="btnVoltar" onclick="loaging('listJogos.html?'+Math.random(),'#contenerIndex');" class="w3-button"><i class="f7-icons">arrow_left</i></a>
+
+  <a href="#" id="btnMenu" onclick="w3_open();" class="w3-button"><i class="f7-icons">ellipsis_vertical_circle</i></a>
+
+  <span class="titleApp">BoleirosBR</span> <span class="version">Beta</span>
+
+  <div class="w3-right creditoView" style="display: none; width: 180px; padding-right: 5px; padding-top: 5px">
+    <table style="">
+      <tr>        
+        <td>CRÊDITOS:</td> 
+        <td>                             
+          <input class="inputBotton creditos inputFinalizar" readonly="true" value="0.00">
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<div class="w3-grey footBar">
+
+  <table style=" border-spacing: 2px; ">
+    <tr>
+      <td>
+        <div class="labelBotton">VALOR:</div>
+        <input class="inputBotton valor inputFinalizar valor" readonly="true" value="0.00">      
+      </td>            
+      <td width="1">
+        <div class="labelBotton">Apostas:</div>
+        <input class="inputBotton valorAposta inputFinalizar qnt" readonly="true" value="0">
+      </td>  
+      <td>
+        <div class="labelBotton">Odds:</div>
+        <input class="inputBotton valorAposta inputFinalizar rating" readonly="true"  value="0.00">
+      </td>
+      <td>
+        <div class="labelBotton">Prémio:</div >
+        <input class="inputBotton valorAposta inputFinalizar premio"  readonly="true" value="0.00">
+      </td>                               
+    </tr>
+  </table> 
+
+  <table style=" border-spacing: 2px; ">
+    <tr>
+      <td><button class="bntTeclado" onclick="tecladoNumber(0,'.valor');">Limpa</b></button></td>
+      <td><button class="bntTeclado" onclick="tecladoNumber(1,'.valor');"> <b>1,00</b></button></td>
+      <td><button class="bntTeclado" onclick="tecladoNumber(2,'.valor');"> <b>2,00</b></button></td>
+      <td><button class="bntTeclado" onclick="tecladoNumber(5,'.valor');"> <b>5,00</b></button></td>
+      <td><button class="bntTeclado" onclick="tecladoNumber(10,'.valor');"> <b>10,00</b></button></td>
+      <td><button class="bntTeclado" onclick="tecladoNumber(20,'.valor');"> <b>20,00</b></button></td>
+      <td><button class="bntTeclado" onclick="tecladoNumber(50,'.valor');"> <b>50,00</b></button></td>
+    </tr>
+  </table> 
+
+  <table style=" border-spacing: 2px; ">
+    <tr>
+      <td width="1" style="display: none;" id="btnVoltarFoot">
+        <button onclick="loaging('listJogos.html?'+Math.random(),'#contenerIndex');" class="w3-btn w3-round w3-red" style="width: 100%;">VOLTAR</button>
+      </td>      
+      <td width="1" style="display: none;" id="btnReset">
+        <button class="w3-btn w3-round w3-red" style="width: 100%;">RESET</button>
+      </td>
+      <td id="btnFinalizar">
+        <button class="w3-btn w3-round w3-khaki bntFinalizar"  style="width: 100%;">FINALIZAR <span class="begins qnt">0</span></button>
+      </td>
+      <td style="display: none;" id="btnConlcuir">
+        <button onclick="apostasEnviar();" class="w3-btn w3-round w3-green" style="width: 100%;">CONCLUIR E IMPRIMIR</button>
+      </td>      
+    </tr>
+  </table>
+
+</div>
+
+<div class="containerTop containerFoot" id="contenerIndex">
+</div>
+
+<script type="text/javascript">
+
+  $('#logo').attr('src','http://boleirosbr.com.br/site/modules/clientes/admin/'+getItem('brasao'));
+  $('.titleApp').html(getItem('nome_App'));
+
+  $('#btnMenu').show();
+
+  if(getItem('typeTerminal')=='mq'){
+    $('.creditoView').show();    
+  }
+
+  $('#btnVoltar').hide();  
+
+  loaging('listJogos.html?','#contenerIndex');
+
+  $('.nome').html(apiLogin.nome);
+  $('.saldo').html(Moeda(apiLogin.saldo));
+
+  if(apiLogin.nome=='visitante'){
+      $('.viewSaldo').hide(); 
+      $('.menuBilhete').hide(); 
+      $('.menuCaixa').hide(); 
+      $('.menuConfig').hide(); 
+  }
+
+
+</script>
+

@@ -1,0 +1,62 @@
+.w3-dark-grey, .w3-hover-dark-grey:hover, .w3-dark-gray, .w3-hover-dark-gray:hover {
+    color: #fff!important;
+    background-color: #151515!important;
+}
+
+.w3-grey, .w3-hover-grey:hover, .w3-gray, .w3-hover-gray:hover {
+    color: #cac4c4!important;
+    background-color: #615e5e!important;
+}
+.w3-light-grey, .w3-hover-light-grey:hover, .w3-light-gray, .w3-hover-light-gray:hover {
+    color: #000!important;
+    background-color: #8a8a8a!important;
+}
+.w3-sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #b7b6b6;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto;
+}
+.claro {
+    color: #fff;
+    background-color: #3a3a3a;
+    padding: 4px;
+}
+.w3-grey, .w3-hover-grey:hover, .w3-gray, .w3-hover-gray:hover {
+    color: #dcdcdc!important;
+    background-color: #615e5e!important;
+}
+
+/*
+.botaoAposta {
+    height: 40px;
+    background-color: #9a9a9a;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(170,170,170,1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(170,170,170,1);
+    box-shadow: 1px 1px 1px 0px rgba(170,170,170,1);
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border: 0px solid #000000;
+}
+.selecton {
+    background: rgb(49, 49, 49);
+    background: -moz-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 45%, rgba(246,41,12,1) 67%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,1)), color-stop(45%, rgba(241,111,92,1)), color-stop(67%, rgba(246,41,12,1)), color-stop(71%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+    background: -o-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 45%, rgba(246,41,12,1) 67%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+    background: -ms-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 45%, rgba(246,41,12,1) 67%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+    color: #fff;
+}
+*/
+.cabecalhoBilhete {
+    margin-top: -10px;
+    padding: 30px;
+    background-color: #313131;
+}
+.top_menu {
+    background-color: #000000;
+    color: #fff;
+    padding: 5px;
+}

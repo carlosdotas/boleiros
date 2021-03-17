@@ -1,0 +1,347 @@
+
+*{
+    font-family: arial;
+}
+table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px;     
+}
+td{
+
+}
+tr{
+
+}
+input{
+    align-content: center;
+}
+.selectLiga{
+    width: 100%
+
+}
+.labelBotton{
+    font-size: 12px;
+}
+.inputBotton {
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.botaoAposta {
+    height: 40px;
+    background-color: #F8CD4D;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(170,170,170,1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(170,170,170,1);
+    box-shadow: 1px 1px 1px 0px rgba(170,170,170,1);
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border: 0px solid #000000;  
+}
+.botaoMais {
+    background-color: #333;
+    color: yellow;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(170,170,170,1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(170,170,170,1);
+    box-shadow: 1px 1px 1px 0px rgba(170,170,170,1);
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border: 0px solid #000000;
+    height: 40px;
+    width: 50px;
+    font-size: 12px;
+}
+
+.begins{
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;   
+    background-color: red;
+    padding: 3px;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+
+.header{
+
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.55);
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.55);
+
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    width: 100%
+}   
+.footer {
+    position: fixed;
+    bottom: 0px;    
+    position: fixed;
+    z-index: 10;
+    width: 100%     
+}
+.titles {
+    text-align: center;
+    font-family: Roboto,Noto,sans-serif;
+    font-size: 20px;
+    padding: 5px;
+}
+.claro {
+    color: #fff;
+    background-color: #296BFF;
+    padding: 4px;
+}
+
+.listJogos td {
+    padding: 5px;
+    border-bottom: 1px solid #aaa;
+}
+.selecton{
+    background: rgba(248,80,50,1);
+    background: -moz-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 45%, rgba(246,41,12,1) 67%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,1)), color-stop(45%, rgba(241,111,92,1)), color-stop(67%, rgba(246,41,12,1)), color-stop(71%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+    background: -webkit-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 45%, rgba(246,41,12,1) 67%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+    background: -o-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 45%, rgba(246,41,12,1) 67%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+    background: -ms-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 45%, rgba(246,41,12,1) 67%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+
+    color: #fff;
+} 
+.subTop{
+    padding: 5px;
+    background: rgba(226,226,226,1);
+    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(50%, rgba(219,219,219,1)), color-stop(51%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );   
+    color: #444;
+}
+.imputBusca {
+    padding: 5px;
+    width: 100%;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    
+    border: 0px solid #000000;
+    background-color: #aaa;
+}
+
+.listJogoTimes{
+    font-size: 16px;
+}
+
+.login {
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    display: table-cell;
+    color: #eee;
+}
+.login .form {
+    width: 250px;
+}
+
+.login .inputs {
+    background-color: #fff;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: t
+}
+.login input{
+    background-color: #fff;
+    border: 0px solid #000000;
+    font-size: 18px;
+    padding: 5px;
+    width: 220px;
+
+}
+
+.marginTop {
+    margin-top: 5px;
+}
+.rodape {
+    position: fixed;
+    bottom: 0;
+    font-size: 14px;
+    margin: 5px;
+    width: 100%;
+}
+.rodape .left {
+    float: left;
+}
+.rodape .right {
+    float: right;
+    margin-right: 5px;
+}
+.green {
+    background-color: #0E763B;
+}
+.sinza {
+    background-color: #eeeeee;
+    color: #444;
+}
+.inputTop{
+    font-size: 20px;
+    padding: 5px;
+    width: 100px;
+    margin-right: 5px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;   
+    background-color: green; 
+    color: #fff;
+    border-width: 0px;
+    font-weight: bold;
+}
+
+
+.bntConfirm {
+
+    background-color: green;
+    color: #fff;
+
+}
+
+.bntVoltar {
+    background-color: red;
+    color: #fff;        
+}
+.bntTeclado{
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;    
+    padding: 5px;
+    width: 100%;
+    font-size: 16px;
+    height: 100%;
+    border-width: 1px;
+}
+.bntView, .bntConfirm, .bntVoltar {
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+
+.inputBotton {
+    font-size: 18px;
+    width: 100%;
+    padding: 2px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;
+    font-weight: bold;
+}
+
+.editavel {
+    background-color: #ccc;
+    color: #111;
+    font-size: 24px;
+    padding: 5px;
+}
+.inputFinalizar {
+    background-color: #444;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #fff;
+}
+.top_menu{
+  background-color: #303E9F;
+  color: #fff;
+  padding: 5px;
+}
+
+.toolbar-bottom{
+display: table;
+}
+.amarelo{
+    background-color: yellow;
+    color: #000;
+}
+.azul{
+    background-color: blue;
+    color: #fff;
+}
+.verde{
+    background-color: green;
+    color: #fff;
+}
+.vermelho{
+    background-color: red;
+    color: #fff;
+}
+.laranja{
+    background-color: orange;
+    color: #fff;
+}
+.arredondado{
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;   
+    padding: 5px; 
+}
+
+  * {
+    font-family: arial;
+  }  
+  .topoBar{
+    z-index: 4;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+  .footBar{
+    position: fixed; /* Set the navbar to fixed position */
+    bottom: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 10;
+  }
+  .version{
+    font-size: 10px;
+  }
+  .sombra1{
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);    
+  }
+  .sombra2{
+    -webkit-box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75);  
+  }
+  .sombraCenter{
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);  
+  }  
+  .containerTop{
+    padding-top: 40px;
+  }
+  .containerFoot{
+    padding-bottom: 75px;
+  }
+
+  .top_menu {
+    background-color: #303E9F;
+    color: #fff;
+    padding: 5px;
+  }
+#viewCaixa{
+    padding-top:130px;
+}

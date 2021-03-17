@@ -1,0 +1,51 @@
+<div class="w3-dark-grey topoBar w3-card">
+  <a href="#" id="btnVoltar" onclick="loaging('index.html?'+Math.random());" class="w3-button"><i class="f7-icons">arrow_left</i></a>
+  BILHETE
+  <div class="w3-right">
+
+
+  </div>  
+</div> 
+
+<div style="background-color: #eee; padding-top: 50px;">
+    <ul class="w3-ul">
+        <li class="tipoImpressora" style="display: none;">Tipo de Impressão:
+            <div class="w3-right" ><select class="w3-round" style="width: 120px;" placeholder="Selecione" id="impressao" onchange="setItem('impressao',$(this).val());" ><option value="bt">Bluetooth</option><option value="driver">Driver</option></select></div>
+        </li>
+        <li class="tipoTerminal" style="display: none;">Tipo de Terminal:
+            <div class="w3-right" ><select style="width: 120px;" class="w3-round" placeholder="Selecione" id="typeTerminal" onchange="setItem('typeTerminal',$(this).val());" ><option value="pos">POS</option><option value="mq">Maquina</option></select></div>
+        </li>
+        <li class="espelhaValor" style="display: none;">Espelhar valor em Créditos:
+            <div class="w3-right" ><select style="width: 120px;" class="w3-round" placeholder="Selecione" id="espelhaValor" onchange="setItem('espelhaValor',$(this).val());" ><option value="n">Não</option><option value="s">Sim</option></select></div>
+        </li>        
+        <li>Tema:
+            <div class="w3-right" ><select style="width: 120px;" class="w3-round" placeholder="Selecione" id="tema" onchange="setItem('tema',$(this).val());" >
+                <option value="padrao">Padrão</option>
+                <option value="escuro">Escuro</option>
+                <option value="claro">Claro</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="vermelho">Vermelho</option>
+                <option value="laranja">Laranja</option>
+                <option value="nilaz">Nilaz</option>
+            </select></div>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $("#typeTerminal").val(getItem('typeTerminal'));
+    $("#impressao").val(getItem('impressao'));    
+
+    $('#tema').change(function(event) {
+        $('#themes').attr('href',"src/css/temas/"+$(this).val()+".css");
+    });
+
+    $("#tema").val(getItem('tema'));   
+    if(apiLogin.nivel=='3'){
+        $('.tipoTerminal').show();
+        $('.espelhaValor').show();        
+        $('.tipoImpressora').show();    
+
+    } 
+</script>

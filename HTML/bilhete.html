@@ -1,0 +1,97 @@
+
+
+<div class="w3-grey topoBar w3-card" style="padding-top: 50px">
+    <table style="border-spacing: 2px">
+        <tbody>
+            <tr>
+                <td style="padding-right: 5px;" >
+                    <input class="inputBotton"  id="consultarBilhete" onclick="" placeholder="Digite o codigo do bilhete">
+                </td>
+                <td width="120">
+                    <button class="bntTeclado" onclick="apostasConsulta($('#consultarBilhete').val());">CONSULTAR</button> 
+                </td>
+            </tr>
+        </tbody>
+    </table>   
+</div>
+
+<div class="w3-dark-grey topoBar w3-card">
+  <a href="#" id="btnVoltar" onclick="loaging('pages/index.html?'+Math.random());" class="w3-button"><i class="f7-icons">arrow_left</i></a>
+  BoleirosBR <span class="version">Beta</span>
+</div>
+
+<style type="text/css">
+    .topBilhete {
+        margin-top: 5px;                    
+    }
+    .topBilhete td{
+        text-align: center;
+        width: 33%;
+        font-weight: 900;
+        vertical-align: top;
+    }
+    .topBilhete th{
+        text-align: center;
+        width: 33%;
+        font-weight:  100;
+        vertical-align: top;
+    }
+    .statusBilhete{
+        padding:5px;
+        border-radius: 5px 5px 5px 5px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px; 
+        background-color: yellow;   
+        font-weight:  100; 
+        font-size: 12px;   
+        display: inline;         
+    }
+    #listaApostasBilhete table{
+        margin-bottom: 10px;
+    }
+</style>
+
+<div id="viewBilhete" style="display: none; background-color: #222; color:#fff; padding-top: 100px" >
+    <center class="cabecalhoBilhete">
+        
+        <img width="70" id="logo" src="...">
+
+        <table class="topBilhete">
+            <tr>
+                <th>DATA</th>
+                <th>CLIENTE</th>
+                <th>CAMBISTA</th>
+            </tr>
+            <tr>
+                <td id="data_validade">...</td>
+                <td id="cliente">...</td>
+                <td id="cambista">TESTE</td>
+            </tr>
+        </table>
+        <table class="topBilhete">
+            <tr>
+                <th>VALOR</th>
+                <th>PRÊMIO</th>
+                <td rowspan="2"><div class="statusBilhete">Pre-bilhete</div></td>
+            </tr>
+            <tr>
+                <td id="valor_aposta">...</td>
+                <td id="valor_retorno">...</td>
+            </tr>                
+        </table>
+    </center>
+    <div id="listaApostasBilhete" style="padding: 15px;">
+
+    </div>
+    <br><br><br><br>
+</div>
+
+<div class="w3-grey footBar">
+
+    <button class="bntTeclado" onclick="apostasValidar();" style="height: 50px">Confirmar</button>
+
+</div>
+
+<script>
+$('#logo').attr('src','http://boleirosbr.com.br/site/modules/clientes/admin/'+getItem('brasao'));
+</script>

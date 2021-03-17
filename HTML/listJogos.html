@@ -1,0 +1,45 @@
+z<div class="w3-gray w3-card" style="padding: 3px;padding-top: 10px; position: fixed; top: 38px;width: 100%;z-index: 1;">                    
+  <table >
+    <tr>
+      <td width="50%" >
+        <input type="text" class="w3-round" style="padding: 2px;width: 100%" id="jogoBusca" onkeyup=""
+        placeholder="Buscar jogos" 
+        >                   
+      </td>
+      <td width="50%">
+        <select class="w3-round" style="padding: 5px;width: 100%" id="ligaBusca" onchange="listarJogos('',$(this).val());"></select>
+      </td>
+    </tr>
+  </table>
+</div> 
+
+<div class="listJogos" style="padding-top: 45px">
+  <table>
+    <tbody id="listadejogos"></tbody>
+  </table>
+  <br><br><br>
+</div>
+<script type="text/javascript">
+  ligasSelect();
+  listarJogos();
+
+  $('#btnFinalizar').show();    
+  $('#btnMenu').show();
+
+  $('#btnVoltar').hide();      
+  $('#btnReset').hide();
+  $('#btnConlcuir').hide();
+  $('#btnVoltarFoot').hide();
+
+  var timer;
+  $('#jogoBusca').keyup(function(event) {
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      listarJogos($('#jogoBusca').val());
+    }, 300);
+    
+  });
+
+  calculaRating();
+  
+</script>

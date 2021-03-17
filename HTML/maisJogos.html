@@ -1,0 +1,56 @@
+
+
+<center class="w3-grey" style="width: 100%;font-size: 25px; padding-top: 10px;" >
+    <div id="viewJogosTimes"></div>
+    <div id="viewJogosData" style="width: 100%;font-size: 18px; color: yellow "></div>
+</center>
+
+
+<div class="listJogos" >
+    <table>
+        <tbody id="listaMaisJogos"></tbody>
+
+    </table>
+    <br><br><br><br><br><br>
+</div>
+<script type="text/javascript">
+
+    $('#btnMenu').hide();
+    $('#btnVoltar').show();
+
+    var jogo = jogoView[0];
+    var datas = jogoView[1];
+    var nome = jogoView[2];
+
+    $('#viewJogosTimes').html(nome);
+    $('#viewJogosData').html(datas);
+
+    getloading('/api/odds_by_id/'+jogo, function( dados ) {
+        console.log(dados);
+        $('#listaMaisJogos').html('');
+
+        var grupoSelect = '';
+
+        $.each( dados.mais_odds, function( key, val ) {           
+
+          if(grupoSelect!=val.grupo){
+            $('#listaMaisJogos').append(`<tr><td colspan="5" ><div class="claro titles" >`+val.grupo+`</div></td></tr>`);
+            grupoSelect=val.grupo;
+        }
+
+        $('#listaMaisJogos').append(`<tr>
+            <td width="100%" align="center" class="linha_bottom">
+            <b class="listJogoTimes" style="font-size:18px;">`+val.desc+`</b>
+            </td>
+            <td width="80" class=""><button style="width:100%" ref="`+jogo+`" value='["`+jogo+`","`+val.nome+`","`+val.taxa+`","`+nome+`","`+datas+`","`+val.grupo+' - '+val.desc+`"]' id="`+val.nome+jogo+`"   class="botaoAposta botaoApostaAction botaoApostaSelect`+jogo+`" >`+val.taxa+`</button></td>
+            </tr>`);
+
+    }); 
+
+        setTimeout(function(){
+          apostasView();
+      },100);
+
+    });
+
+</script>

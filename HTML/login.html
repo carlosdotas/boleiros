@@ -1,0 +1,47 @@
+<div class="w3-display-middle">
+    <center class="login ">
+        <div class="form" >
+            <form id="formLogin">
+                <img style="width: 225px; " id="logo" src="">
+                <div  class="tile" id="titleApp" style="color: #AAA">
+                    Boleiros BR Beta
+                </div>
+                <br>
+                <div class="inputs">
+                    <div>
+                        <input id="usuario" style="width: 220px;" placeholder="Usuário" >
+                    </div>
+                    <hr style="padding:0; margin: 0;">
+                    <div>
+                        <input id="senha" style="width: 220px;" placeholder="Senha" >
+                    </div>
+                </div>
+
+                <div class="marginTop">
+                    <button type="submit" class="w3-green w3-btn w3-round w3-block">ENTRAR</button>
+                </div>
+                <div class="marginTop bntViewVisitante">
+                    <button type="button" onclick="Visitante();" class="bntVisitante w3-light-gray w3-btn w3-round w3-block">ENTRAR COMO VISITANTE</button>
+                </div>
+
+            </form>
+        </div>
+
+    </center>
+</div>
+<div class="rodape">
+    <div class="left">Politica de Privacidade</div>
+    <div class="right">1.0.0 Beta</div>
+</div>
+<script type="text/javascript">
+
+    $('#logo').attr('src',host+'/imgs/'+getItem('brasao'));
+    
+    $('#titleApp').html(getItem('nome_App'));
+
+    if(getItem('typeTerminal')=='mq'){
+        $('.bntViewVisitante').hide();    
+    }
+
+
+</script>

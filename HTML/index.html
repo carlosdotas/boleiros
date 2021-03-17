@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>BR Beta</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="easyui.css">
+<link rel="stylesheet" href="icon.css">
+<link rel="stylesheet" href="framework7-icons.css">
+
+<link rel="stylesheet" id="themes" >
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="easyui-lang-pt_BR.js"></script>
+
+<script type="text/javascript" src="html2canvas.js"></script>
+
+<script type="text/javascript" src="funcoesPrimarias.js"></script>
+<script type="text/javascript" src="configs.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<body class="w3-light-gray">
+  <div id="conteudos">
+    
+  </div>
+</body>
+
+<script type="text/javascript">
+   
+  if(!getItem('token')){
+    loaging('token.html');
+  }else{
+    Login(getItem('user_login'),getItem('user_senha'));     
+  }
+
+
+</script>
+
+</html>

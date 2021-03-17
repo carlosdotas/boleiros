@@ -1,0 +1,48 @@
+<div class="w3-gray w3-card" style="padding: 5px;position: fixed;top:50;width: 100%;z-index: 1">
+    <div class="labelBotton">Nome do Cliente:</div>
+    <input type="text" id="cliente" class="w3-round" style="width: 100%; padding: 5px" placeholder="Digite o nome do Cliente"> 
+</div>
+
+<ul class="w3-ul" id="listApostas" style="z-index: 0; padding-top: 60px"></ul>
+
+<script type="text/javascript">
+
+
+    $('#btnConlcuir').show();
+    $('#btnVoltarFoot').show();
+    $('#btnVoltar').show();
+
+    $('#btnFinalizar').hide();  
+    $('#btnMenu').hide();
+    
+    $('#listApostas').html('');
+    var la = 0;
+    $.each( apostas, function( key, val ) {
+    la++;
+
+    var desc='';
+
+    switch(val[1]) {
+      case 'casa':
+        desc = val[1]
+        break;
+      case 'empate':
+        desc = val[1]
+        break;
+      case 'fora':
+        desc = val[1]
+        break;
+    }
+
+
+
+
+    $('#listApostas').append(`<li class="w3-display-container"><b class="w3-large">`+val[3]+`</b><br>`+desc+' '+val[5]+` - <b class="w3-large">`+val[2]+`</b><span onclick="apostasRemove('`+val[0]+`');this.parentElement.style.display='none'"
+      class="w3-button w3-display-right">&times;</span></li> `);    
+    });
+
+    calculaRating();
+
+
+    //apostasListar();
+</script>

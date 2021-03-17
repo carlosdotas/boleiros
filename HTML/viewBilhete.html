@@ -1,0 +1,89 @@
+<style type="text/css">
+    .topBilhete {
+        margin-top: 5px;                    
+    }
+    .topBilhete td{
+        text-align: center;
+        width: 33%;
+        font-weight: 900;
+        vertical-align: top;
+    }
+    .topBilhete th{
+        text-align: center;
+        width: 33%;
+        font-weight:  100;
+        vertical-align: top;
+    }
+    .statusBilhete{
+        padding:5px;
+        border-radius: 5px 5px 5px 5px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px; 
+        background-color: yellow;   
+        font-weight:  100; 
+        font-size: 12px;   
+        display: inline;         
+    }
+    #listaApostasBilhete table{
+        margin-bottom: 10px;
+    }
+</style>
+<div class="w3-dark-grey topoBar w3-card">
+  <a href="#" id="btnVoltar" onclick="loaging('caixa.html?'+Math.random());" class="w3-button"><i class="f7-icons">arrow_left</i></a>
+  BILHETE
+  <div class="w3-right">
+
+    <a class="w3-button" onclick="reimprimirBilhete(true);" >
+        <i class="f7-icons">arrowshape_turn_up_right_fill</i>
+    </a>
+
+    <a class="w3-button" onclick="reimprimirBilhete();" >
+        <i class="f7-icons">printer_fill</i>
+    </a>
+</div>  
+</div>
+
+
+<div class="w3-grey" id="viewBilhete" style="padding-top: 50px;" >
+    <center class="cabecalhoBilhete">
+
+        <h2 id="bilhete"></h2>
+
+        <img width="70" id="logo" src="...">
+
+        <table class="topBilhete">
+            <tr>
+                <th>DATA</th>
+                <th>CLIENTE</th>
+                <th>CAMBISTA</th>
+            </tr>
+            <tr>
+                <td id="data">...</td>
+                <td id="cliente">...</td>
+                <td id="vendedor"></td>
+            </tr>
+        </table>
+        <table class="topBilhete">
+            <tr>
+                <th>VALOR</th>
+                <th>PRÊMIO</th>
+                <td rowspan="2"><div class="arredondado statusBilhete">ABERTO</div></td>
+            </tr>
+            <tr>
+                <td id="valor_aposta">...</td>
+                <td id="valor_retorno">...</td>
+            </tr>                
+        </table>
+    </center>
+    <div class="w3-dark-grey" id="listaApostasBilhete" style="padding: 15px;">
+    </div>
+    <br><br><br><br><br><br><br>
+</div>
+
+<div class="w3-grey footBar">
+    <button class="bntTeclado" onclick="loaging('caixa.html?');" style="height: 50px">Voltar</button>
+</div>
+<script>
+$('#logo').attr('src','http://boleirosbr.com.br/site/modules/clientes/admin/'+getItem('brasao'));
+
+</script>

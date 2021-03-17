@@ -1,0 +1,164 @@
+<div class="w3-grey topoBar w3-card" style="padding-top: 50px">
+    <table style="border-spacing: 5px">
+        <tbody>
+            <tr>
+                <td width="1">De:</td>
+                <td >
+                    <input type="date" id="dataFrom" onchange="caixaList();" >
+                </td> 
+                <td width="1" >Até:</td>
+                <td >
+                    <input type="date" id="dataTo" onchange="caixaList();" >
+                </td>
+            </tr>
+        </tbody>
+    </table>   
+    <table style="border-spacing: 5px">
+        <tbody>
+            <tr>
+                <td width="120">
+                    FILTRAR:
+                </td>                                
+                <td style="padding-right: 5px;" >
+                    <select class="inputBotton" id="selectFiltroApostas" onchange="caixaListFiltro($(this).val());" ></select>
+                </td>
+            </tr>
+        </tbody>
+    </table>  
+</div>
+<div class="w3-dark-grey topoBar w3-card">
+  <a href="#" id="btnVoltar" onclick="loaging('index.html?'+Math.random());" class="w3-button"><i class="f7-icons">arrow_left</i></a>
+  CAIXA
+</div>
+
+
+<style type="text/css">
+
+    .ERROU{
+        background-color: red;
+    }
+    .ABERTO{
+        background-color: yellow;
+    }
+    .ACERTOU{
+        background-color: blue;
+    }
+    .CANCELOU{
+        background-color: orange;
+    }
+    .CANCELOU,.ACERTOU,.ABERTO,.ERROU,.CANCELOU{
+        border-radius: 200px 200px 200px 200px;
+        -moz-border-radius: 200px 200px 200px 200px;
+        -webkit-border-radius: 200px 200px 200px 200px;
+        border: 0px solid #000000;
+        width: 15px;
+        height: 15px;
+    }
+    .listApostas td{
+        padding: 5px;
+        border-bottom: 1px solid #333;
+    }
+    .listApostas th{
+        background-color: #aaa;
+        color: #fff
+    }
+    .fontGreen{
+        color: green;
+        text-shadow: black 0.05em 0.05em 0.05em;
+        font-weight: bold;
+    }
+    .fontRed{
+        color: red;
+        text-shadow: black 0.05em 0.05em 0.05em;
+        font-weight: bold;
+    }
+    .fontYeloww{
+        color: yellow;
+        text-shadow: black 0.05em 0.05em 0.05em;
+        font-weight: bold;
+    }
+    .fontBlue{
+        color: blue;
+        text-shadow: black 0.05em 0.05em 0.05em;
+        font-weight: bold;
+    }
+    #viewCaixa{
+        text-align: center;
+    }
+
+</style>
+
+<div class="page-content" id="viewCaixa" >
+    
+    <table >
+        <tr>
+            <td>APOSTADO:<div class="fontGreen" id="apostado"></div></td>
+            <td>ACERTOS:<div class="fontBlue" id="premio"></div></td>
+            <td>COMISSÃO:<div class="fontYeloww" id="comissao"></div></td>
+            <td>LÍQUIDO:<div class="fontRed" id="liquido"></div></td>
+        </tr>
+    </table>
+
+    <hr>
+    <span>LEGENDA:</span>
+    <table style="text-align: left; margin: 5px">
+        <tr>
+            <td><div class="ABERTO"></div></td>
+            <td>Aberto</td>
+            <td><div class="ACERTOU"></div></td>
+            <td>Ganhou</td>
+            <td><div class="ERROU"></div></td>
+            <td>Perdeu</td>
+            <td><div class="CANCELOU"></div></td>
+            <td>Cancelado</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table class="listApostas">
+        <tr>
+            <th width="1"></th>
+            <th>Data</th>
+            <th>Código</th>
+            <th>Cliente</th>
+            <th>Valor</th>
+            <th>Prêmio</th>
+        </tr>
+        <tbody id="listApostasCaixa"></tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    now = new Date;
+
+    segunda_ini = (now.getDate()-(now.getDay()-1));
+    segunda_fim = (segunda_ini+6);
+
+    //now.setDate(segunda_ini);
+    //now.setDate(now.getMonth());
+
+    //document.write ("Segunda é " +  ", " + segunda + " de " + now.getMonth() + " de " + now.getFullYear() );
+
+    var data_ini = now.getFullYear()+'-'+("00" + (now.getMonth()+1)).slice(-2)+'-'+("00" + segunda_ini).slice(-2);
+    var data_fim = now.getFullYear()+'-'+("00" + (now.getMonth()+1)).slice(-2)+'-'+("00" + segunda_fim).slice(-2);
+
+
+    console.log(data_ini+' - '+data_fim);
+
+    $('#dataFrom').val(data_ini);
+    $('#dataTo').val(data_fim);        
+
+    if(dataFrom){
+        //alert(dataFrom);
+        $("#dataFrom").val(dataFrom);
+        $("#dataTo").val(dataTo);
+    }
+
+    caixaList();
+
+    $("#dataFrom").change(function(event) {
+        dataFrom = $("#dataFrom").val();
+        dataTo = $("#dataTo").val();
+    });
+
+</script>
